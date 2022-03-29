@@ -1,9 +1,10 @@
 {% extends '_base.html' %}
-
+{% load static %}
 {% block title %}HomePage{% endblock title %}
 
 {% block content %}
 <h1>HomePage</h1>
+<img class="bookcover" src="{% static 'images/flag_of_kanagawa.png' %}">
 
 {% if user.is_authenticated %}
     Hi {{user.username}}
@@ -12,4 +13,5 @@
     <p>Yoy are not logged in</p>
     <p><a href="{% url 'login' %}">Log in</a> | <a href="{% url 'signup' %}">Sign up</a></p>
 {% endif %}
+    <p><a href="{% url 'about' %}">About</a></p>
 {% endblock content %}
