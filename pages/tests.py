@@ -2,7 +2,7 @@ from django.test import SimpleTestCase
 from django.urls import reverse
 
 class HomePageTests(SimpleTestCase):
-    
+
     def setUp(self):
 
         url = reverse('home')
@@ -12,9 +12,9 @@ class HomePageTests(SimpleTestCase):
 
         self.assertEqual(self.response.status_code, 200)
 
-    def test_homepage_url_name(self):
+    def test_homepage_contains_correct_html(self):
 
-        self.assertEqual(self.response.status_code, 200)
+        self.assertContains(self.response, 'HomePage')
 
     def test_homepage_template(self):
 
