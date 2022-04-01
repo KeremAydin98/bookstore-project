@@ -7,6 +7,8 @@ services:
         environment:
             - SECRET_KEY=django-insecure-bnt4r52ukn19#gw-jd^j8r_0!1v3h87x9zqimyijz)wu%-1xzm
             - DEBUG=1
+            - STRIPE_TEST_PUBLISHABLE_KEY=pk_test_51Kjn6wHT8xarysAaEZMUC3LIRBMXwm735DKPGXMMStGvckih6M9fSUn1Df8UFxZvK2tJDlpuzKVmJDBV8ifbcLiR00XVtIwkTH
+            - STRIPE_TEST_SECRET_KEY=I_dont_think_so
         volumes:
             - .:/code
         ports:
